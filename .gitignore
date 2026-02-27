@@ -18,10 +18,9 @@ out/
 .vscode/
 .idea/
 *.swp
-*~
 
 ## Native build
-sdformat_native/build/
+sdformat_native~/build/
 *.so
 *.dylib
 *.dll

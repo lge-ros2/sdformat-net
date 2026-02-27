@@ -10,7 +10,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BUILD_TYPE="${1:-Release}"
-BUILD_DIR="${SCRIPT_DIR}/sdformat_native/build"
+BUILD_DIR="${SCRIPT_DIR}/sdformat_native~/build"
 
 echo "==> Building sdformat_shim (${BUILD_TYPE}) ..."
 mkdir -p "${BUILD_DIR}"
