@@ -24,7 +24,7 @@ Add to your project's `Packages/manifest.json`:
 
 ## Prerequisites
 
-The native shim library (`sdformat_shim.so` / `.dylib` / `.dll`) must be built and placed in the Unity project's `Assets/Plugins/` directory. See the main [README](../README.md) for build instructions.
+The native shim library (`sdformat_wrapper.so` / `.dylib` / `.dll`) must be built and placed in the Unity project's `Assets/Plugins/` directory. See the main [README](../README.md) for build instructions.
 
 ## Quick Start
 

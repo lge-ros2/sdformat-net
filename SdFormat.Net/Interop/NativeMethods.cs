@@ -1,5 +1,5 @@
 // Copyright (c) 2026 LGE-ROS2 — MIT License
-// P/Invoke declarations for the native sdformat_shim library.
+// P/Invoke declarations for the native sdformat_wrapper library.
 
 using System;
 using System.Runtime.InteropServices;
@@ -8,7 +8,7 @@ namespace SdFormat.Interop
 {
     internal static class NativeMethods
     {
-        private const string Lib = "sdformat_shim";
+        private const string Lib = "sdformat_wrapper";
 
         // ====================================================================
         // Memory

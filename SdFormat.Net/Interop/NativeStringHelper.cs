@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace SdFormat.Interop
 {
     /// <summary>
-    /// Helpers for marshalling native strings allocated by sdformat_shim.
+    /// Helpers for marshalling native strings allocated by sdformat_wrapper.
     /// </summary>
     internal static class NativeStringHelper
     {

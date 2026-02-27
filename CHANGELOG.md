@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial release
-- Native C shim (`sdformat_shim`) wrapping libsdformat 13–16 via P/Invoke
+- Native C shim (`sdformat_wrapper`) wrapping libsdformat 13–16 via P/Invoke
 - C# wrappers: `SdfRoot`, `SdfWorld`, `SdfModel`, `SdfLink`, `SdfJoint`, `SdfJointAxis`, `SdfVisual`, `SdfCollision`, `SdfGeometry`, `SdfMaterial`, `SdfSensor`, `SdfLight`, `SdfFrame`
 - Math types: `SdfVector3d`, `SdfQuaterniond`, `SdfPose3d`, `SdfColor`
 - Enums: `GeometryType`, `JointType`, `SensorType`, `LightType`

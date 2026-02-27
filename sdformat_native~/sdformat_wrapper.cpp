@@ -1,5 +1,5 @@
 /*
- * sdformat_shim.cpp
+ * sdformat_wrapper.cpp
  *
  * Thin C wrapper around libsdformat C++ API for P/Invoke from .NET/Unity.
  * Exposes opaque handle pointers and flat C functions.

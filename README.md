@@ -9,7 +9,7 @@ Designed for use in **Unity** and other .NET / C# projects.
 sdformat-net/
 ├── sdformat_native/          # Thin C shim around C++ libsdformat
 │   ├── CMakeLists.txt
-│   └── sdformat_shim.cpp     # Exports flat C API via P/Invoke
+│   └── sdformat_wrapper.cpp     # Exports flat C API via P/Invoke
 ├── SdFormat.Net/             # C# .NET class library (netstandard2.1)
 │   ├── Enums.cs              # GeometryType, JointType, SensorType, etc.
 │   ├── MathTypes.cs          # SdfVector3d, SdfQuaterniond, SdfPose3d, SdfColor
@@ -64,8 +64,8 @@ conda install libsdformat --channel conda-forge
 ./build_native.sh Debug    # Debug build
 ```
 
-This produces `sdformat_shim.so` (Linux), `sdformat_shim.dylib` (macOS), 
-or `sdformat_shim.dll` (Windows) in `sdformat_native/build/`.
+This produces `sdformat_wrapper.so` (Linux), `sdformat_wrapper.dylib` (macOS), 
+or `sdformat_wrapper.dll` (Windows) in `sdformat_native/build/`.
 
 ### 2. Build the .NET library
 
@@ -157,7 +157,7 @@ Console.WriteLine($"Model from string: {model2?.Name}");
 ## Unity Integration
 
 1. Build the native shim for your target platform
-2. Place `sdformat_shim.so` / `.dylib` / `.dll` in `Assets/Plugins/`
+2. Place `sdformat_wrapper.so` / `.dylib` / `.dll` in `Assets/Plugins/`
 3. Place `SdFormat.Net.dll` in `Assets/Plugins/` (or reference the project)
 4. Use the `SdFormat` namespace in your scripts
 
@@ -165,9 +165,9 @@ Console.WriteLine($"Model from string: {model2?.Name}");
 ```
 Assets/Plugins/
 ├── x86_64/
-│   └── sdformat_shim.so        # Linux
-├── sdformat_shim.dylib          # macOS
-└── sdformat_shim.dll            # Windows
+│   └── sdformat_wrapper.so        # Linux
+├── sdformat_wrapper.dylib          # macOS
+└── sdformat_wrapper.dll            # Windows
 ```
 
 ## Wrapped API Coverage

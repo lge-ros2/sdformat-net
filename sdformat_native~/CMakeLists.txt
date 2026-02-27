@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(sdformat_shim C CXX)
+project(sdformat_wrapper C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -33,19 +33,21 @@ else()
     "Install with: sudo apt install libsdformat14-dev")
 endif()
 
-add_library(sdformat_shim SHARED
-  sdformat_shim.cpp
+add_library(sdformat_wrapper SHARED
+  sdformat_wrapper.cpp
 )
 
-target_link_libraries(sdformat_shim PRIVATE ${SDFORMAT_TARGET})
+target_link_libraries(sdformat_wrapper PRIVATE ${SDFORMAT_TARGET})
 
-# Set output name without 'lib' prefix on Linux for consistency
-set_target_properties(sdformat_shim PROPERTIES
+# Set RPATH to look for dependencies in the same directory as the wrapper
+set_target_properties(sdformat_wrapper PROPERTIES
   PREFIX ""
-  OUTPUT_NAME "sdformat_shim"
+  OUTPUT_NAME "sdformat_wrapper"
+  BUILD_WITH_INSTALL_RPATH TRUE
+  INSTALL_RPATH "$ORIGIN"
 )
 
-install(TARGETS sdformat_shim
+install(TARGETS sdformat_wrapper
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
 )
