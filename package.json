@@ -1,0 +1,26 @@
+{
+  "name": "com.lge-robotics.sdformat-net",
+  "version": "0.1.0",
+  "displayName": "SdFormat.Net",
+  "description": "C# .NET wrapper for libsdformat (Gazebo SDFormat parser). Provides managed access to SDF world, model, link, joint, visual, collision, sensor, light, and frame definitions via a thin native shim (P/Invoke).",
+  "unity": "2022.3",
+  "license": "MIT",
+  "keywords": [
+    "sdformat",
+    "gazebo",
+    "robotics",
+    "simulation",
+    "sdf"
+  ],
+  "author": {
+    "name": "LGE-ROS2",
+    "url": "https://github.com/lge-ros2"
+  },
+  "samples": [
+    {
+      "displayName": "Unity SDF Loader",
+      "description": "Example MonoBehaviour that loads an SDF file and creates GameObjects.",
+      "path": "Samples~/Unity"
+    }
+  ]
+}
