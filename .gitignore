@@ -1,0 +1,33 @@
+## .NET
+bin/
+obj/
+*.suo
+*.user
+*.sln.docstates
+*.nupkg
+*.snupkg
+
+## Build
+build/
+out/
+[Dd]ebug/
+[Rr]elease/
+
+## IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*~
+
+## Native build
+sdformat_native/build/
+*.so
+*.dylib
+*.dll
+*.o
+*.a
+
+## OS
+.DS_Store
+Thumbs.db

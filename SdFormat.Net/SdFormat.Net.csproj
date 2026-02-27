@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>SdFormat</RootNamespace>
+    <AssemblyName>SdFormat.Net</AssemblyName>
+    <Version>0.1.0</Version>
+    <Authors>LGE-ROS2</Authors>
+    <Description>C# .NET wrapper for libsdformat (Gazebo SDFormat parser)</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>sdformat;gazebo;robotics;simulation;sdf;unity</PackageTags>
+    <RepositoryUrl>https://github.com/gazebosim/sdformat</RepositoryUrl>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+</Project>
