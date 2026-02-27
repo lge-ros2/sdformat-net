@@ -21,11 +21,16 @@ out/
 
 ## Native build
 sdformat_native~/build/
+*.o
+*.a
+
+# Ignore native libs everywhere except Plugins/ (prebuilt for Unity)
 *.so
 *.dylib
 *.dll
-*.o
-*.a
+!Plugins/**/*.so
+!Plugins/**/*.dylib
+!Plugins/**/*.dll
 
 ## OS
 .DS_Store

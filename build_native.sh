@@ -26,7 +26,13 @@ fi
 
 echo "==> Built: ${SHIM_LIB}"
 
-# Copy into the .NET project output for convenience
+# Copy into the Plugins directory for Unity package
+PLUGINS_DIR="${SCRIPT_DIR}/Plugins/x86_64"
+mkdir -p "${PLUGINS_DIR}"
+cp "${SHIM_LIB}" "${PLUGINS_DIR}/"
+echo "==> Copied to ${PLUGINS_DIR}/"
+
+# Also copy into .NET project output for non-Unity usage
 DOTNET_BUILD_DIR="${SCRIPT_DIR}/SdFormat.Net/bin"
 mkdir -p "${DOTNET_BUILD_DIR}"
 cp "${SHIM_LIB}" "${DOTNET_BUILD_DIR}/"
